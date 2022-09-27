@@ -1,0 +1,51 @@
+<!-- <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="medium" type="timer" [fullScreen] = "true">  
+  <p style="color: white; font-size: large;" >Please Wait....</p>  
+  </ngx-spinner>   -->
+  <!-- <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="medium"  template="<img src='	https://media.giphy.com/avatars/mumbaiindians/JKlAc86cEAoD/200h.gif'/>">  
+    <p style="color: white; font-size: large;margin-top:42mm ;" >Please Wait....</p>  
+    </ngx-spinner>   -->
+  
+
+<div>    
+    <div class="row text-center" style="margin-top:10px;">    
+      <div class="col-sm-12 btn btn-success">    
+        Employee Detail's   
+      </div>    
+    </div>    
+    
+  </div>    
+     
+  
+<div>  
+  
+    <table class="table">  
+      <thead class="dark">  
+        <tr>
+          <th></th>  
+          <th>Id</th>  
+          <th>Name</th>  
+          <th>Age</th>  
+          <th>Gender</th>  
+          <th>Phone</th>  
+          <th>Email</th>
+          <th>DOB</th>
+          <th></th>
+        </tr>  
+      </thead>  
+      <tbody>
+         
+        <tr *ngFor="let user of users.users; index as i"  [class.red]="color && currentRow === i+1" > 
+          <td></td> 
+          <td>{{user.id}}</td>  
+          <td>{{user.firstName}}</td>  
+          <td>{{user.age}}</td>
+          <td>{{user.gender}}</td>  
+          <td>{{user.phone}}</td>  
+          <td>{{user.email}}</td> 
+          <td>{{user.birthDate | date:'dd-MM-YYYY'}}</td> 
+          <td><button class="btn btn-primary newbutton" (click)="colorChange(user.id)">Click</button></td>
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  
+ 
